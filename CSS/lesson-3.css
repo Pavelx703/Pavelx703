@@ -1,0 +1,60 @@
+/* .wrapper { */
+    /* width: 300px;  */
+    /* height: 1300px;  */
+    
+    /* background-image: url("https://klike.net/uploads/posts/2019-01/1547795564_1.jpg") ; */
+    /* background-repeat: repeat-y; */
+    /* background-color: blue; */
+    /* background-attachment: fixed; */
+
+
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    /* padding: 20px 30px 30px 50px; */
+    /* padding: color pink; */
+    /* padding: 30px; */
+    /* margin: 50px; */
+    /* font-size: 50px; */
+    /* font-style: italic; */
+    /* color: silver; */
+    /* text-transform: uppercase;
+    line-height: 60px;
+}
+
+    .wrapper {
+        width: 1300px; 
+        height: 1300px; 
+        
+        background-image: url("https://klike.net/uploads/posts/2019-01/1547795564_1.jpg") ;
+        background-repeat: repeat-y;
+        background-color: blue;
+        background-attachment: fixed;
+    
+    
+        /* text-align: center; */
+        /* vertical-align: middle; */
+        /* padding: 20px 30px 30px 50px; */
+        /* padding: color pink; */
+        /* padding: 30px;
+        margin: 50px;
+        font-size: 50px;
+        font-style: italic;
+        color: silver;
+        text-transform: uppercase;
+        line-height: 60px;} */
+/* .box { */
+    /* display: inline-block; */
+    /* display: flex; */
+    /* width: 200px; 
+    height: 200px; 
+    background: red;
+    text-align: center; */
+    /* vertical-align: middle; */
+    /* margin-top: 50px; */
+    /* padding-left: 300; */
+
+
+/* } */
+/* li: { */
+    list-style-type: none; /* Убираем маркеры */
+   /* } */ */
