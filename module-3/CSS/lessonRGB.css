@@ -1,5 +1,6 @@
 .color {
     color: rgba(163, 39, 97, 0.5);
     color: #888888;
-    background-color: #1212ff;
+    background-color:hsla(hue, saturation, lightness, 0.8)
+    (29, 230, 106);
 }
