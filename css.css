@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+     box-sizing: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+a {
+     color: #626262;
+    }
+.site-navigation {
+       margin: 0;
+       padding: 0;
+       text-align: center;
+       color: #626262;
+}
+.ul1 .li1 a:hover,
+.ul1 .li1 a:focus {
+     color: #03a9f4;
+}
+.ul1 .li1 a:active {
+    color: #03a9f4;
+}
+.ul1 li:last-child {
+margin-right: 0px
+}
+.ul1 li:first-child {
+    margin-left: 0px
+}
+.ul1 .li1 {
+    margin: 50px;
+     display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: 75px;
+    font-family: 'Playfair Display', serif;
+}
+
+.ul1 .li1 a {
+    text-decoration: none;
+  }
+body {
+     color: #626262; 
+     font-family: 'Playfair Display', serif;
+}
+.container .wrapper {
+    display: inline-block;
+    width: 420px;
+    margin-top: 100px;
+    margin-right: 56px;
+    /* Не понимаю почему не получается поставить 60рх */
+}
+.container .wrapper:nth-child(2n) {
+    margin-right: 0px;
+}
+.bottom {
+    margin-top: 30px;
+    color: #b4ad9e;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: lighter;
+}
+.note {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.text {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 40px;
+    margin-top: 0px;   
+}
+footer.more {
+    text-align: center;
+}
+.button {
+    width: 163px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    font-size: 20px;
+    border-style: solid;
+    color: #626262;
+    background: inherit;
+}
