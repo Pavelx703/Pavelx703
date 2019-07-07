@@ -1,0 +1,97 @@
+.slider {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: green;
+}
+.slides-button {
+    position: absolute;
+    width: 50;
+    height: 50;
+    background: blue;
+    top: 50%;
+    transform: translate(-50%);
+}
+.slides-button-left {
+    left: 0px;
+    
+
+}
+.slides-button-right {
+    right: 0px;
+}
+.slides-pagination-item {
+    height: 10px;
+    width: 30px;
+    border: 1px solid blue;
+    display: inline-block;
+    margin-right: 5px;
+
+
+}
+.slides-pagination-item:last-child {
+    margin-right: 0px;
+}
+.slides-pagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+}
+/* .slides-pagination-item.active { */
+    /* position: absolute; */
+    /* transform: translate(50%); */
+    /* margin-right: 50px; */
+/* } */
+.slides-img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+
+}
+.slides {
+    height: 100%;
+    width: 100%; 
+}
+.text {
+    position: absolute;
+color: rgb(238, 230, 230);
+left: 50%;
+right: 50%;
+transform: translate(50%, 50%);
+
+}
+.slides-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 50%);
+    position: absolute;
+    display: none;
+}
+.slides:hover .slides-overlay,
+.slides:hover .text {
+display: block;
+}
+.parent {
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 0px;
+/* overflow: scroll; */
+}
+body {
+    min-width: 100vh;
+    /* position: relative; */
+overflow: hidden;
+}
+.child {
+    width: 200px;
+    height: 200px;
+    background-color: crimson;
+    position: absolute;
+    overflow: scroll;
+left: 50px;
+top: 50px;
+transform: translate(50%, 50%);
+}
