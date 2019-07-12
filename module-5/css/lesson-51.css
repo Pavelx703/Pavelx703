@@ -1,0 +1,11 @@
+.card {
+    width: 500;
+    height: 500;
+    background: yellow;
+    border: 2px, solid, black;
+}
+.card-image {
+    width: 500;
+    height: 100;
+    opacity: ;
+}
