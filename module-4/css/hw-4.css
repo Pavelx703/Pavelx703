@@ -14,23 +14,15 @@ img {
 .container {
     width: 1110px;
     margin: 0 auto;
-    /* font-size: 0px; */
-    /* background-color: aqua; */
-    /* margin-left: 30px; */
-
 }
 .header {
     width: 1110px;
     height: 50px;
-    /* background-color: darkorange; */
 }
-
-.site-logo a{
-    /* background-color: chocolate; */
-    /* text-decoration: none; */
+.site-logo a {
     text-transform: uppercase;
     font-size: 30px;
-    color: #555252;
+    color: rgb(85, 82, 82);
     text-decoration: none;
     float: left;
     font-family: 'Roboto', sans-serif;
@@ -39,24 +31,12 @@ img {
 }
 .site-logo a::first-letter {
     font-weight: bold;
-    color: #1abc9c;
-}
-/* .site-logo a:last-of-type {
-    font-weight: lighter;
-} */
-
-.site-navigation li {
-    /* float: left; */
-    /* background-color: blueviolet; */
-    /* text-decoration: none; */
+    color: rgb(26, 188, 156);
 }
 .menu .menu-item:last-child {
         margin-right: 0px;
 }
-
 .menu {
-    /* background-color: blue; */
-    /* text-decoration: none; */
     width: 465px;
     list-style: none;
     float: right;
@@ -65,49 +45,145 @@ img {
     overflow: hidden;
     padding-left: 0px;
 }
-
 .menu-item a {
     text-decoration: none;
 }
-
 .menu-item a {
-    /* background-color: brown; */
     float: left;
     margin-right: 20px;
     text-transform: uppercase;
-    /* text-decoration: none; */
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    /* font-family: 'Open Sans', sans-serif; */
     font-weight: bold;
-    color: #0f0101;
+    color: rgb(15, 1, 1);
 }
 .menu-item a:hover {
-    color: #1abc9c;
+    color: rgb(26, 188, 156);
 }
 .menu.menu-item a :active {
-    color: #1abc9c;
+    color: rgb(26, 188, 156);
 }
 .menu-item a :focus {
-    color: #1abc9c;
+    color: rgb(26, 188, 156);
 }
-
 .clearfix::after {
     display: table;
     content: '';
     clear: both;
 }
 .headline {
-    /* display: inline-block; */
-    /* margin: 0 auto; */
     font-weight: bold;
     font-size: 48px;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    padding-left: 300px;
+    text-align: center;
 }
 .card {
     float: left;
-    
+    margin: 0 30px 70px 0;
+    position: relative; 
+}
+.card-wrapper {
+    height: 320px;
+    width: 255px;
+}
+.card-picture {
+    position: absolute;
+    object-fit: cover;
+    height: 280px;
+    width: 255px;
+}
+.card-name {
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background-color: #555252;
+    bottom: 0px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding-left: 13px;
+    padding-top: 10px;
+}
+.card-price {
+    display: block;
+    position: absolute;
+    background-color: rgb(194, 182, 182);
+    width: 55px;
+    height: 40px;
+    bottom: 0px;
+    left: 200px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding-left: 13px;
+    padding-top: 10px;
+}
 
+.card-wrapper:hover .card-price {
+    background-color: rgb(127, 217, 199);
+}
+.card-wrapper:hover .card-name {
+    background-color: rgb(26, 188, 156);
+    }
+section.card:nth-child(4n) {
+    margin-right: 0;
+}
+.headline::after{
+    display: block;
+    content: "";
+    margin: 32px auto 92px;
+    height: 6px;
+    width: 165px;
+    background-color:rgb(26, 188, 156);
+}
+.news-card {
+    float: left;
+    width: 350px;
+    margin: 0 30px 230px 0;
+}
+section.news-card:nth-child(3n) {
+    margin-right: 0;
+}
+.news-card-picture {
+    object-fit: cover;
+    height: 260px;
+    width: 350px;
+}
+.caption-news-picture::after{
+    content: "";
+    display: block;
+    margin: 15px 0 30px;
+    height: 4px;
+    width: 135px;
+    background-color:rgb(26, 188, 156);
+}
+.caption-news-picture {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+}
+.caption-news-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+}
+.news-card-button {
+    background-color: rgb(78, 198, 171);
+    border-width: 1px;
+    border-color:  rgb(78, 198, 171)#626262;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    padding: 0.7rem 2.5rem;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 26px;
+    margin-top: 6px;
+    border-radius: 5px;
 }
