@@ -176,14 +176,12 @@ section.news-card:nth-child(3n) {
 }
 .news-card-button {
     background-color: rgb(78, 198, 171);
-    border-width: 1px;
-    border-color:  rgb(78, 198, 171);
     color: rgb(255, 255, 255);
-    border-style: solid;
     padding: 0.7rem 2.5rem;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     line-height: 26px;
     margin-top: 6px;
+    border: none;
     border-radius: 5px;
 }
