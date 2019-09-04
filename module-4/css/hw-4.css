@@ -11,6 +11,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+.clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}
 .container {
     width: 1110px;
     margin: 0 auto;
@@ -27,7 +32,7 @@ img {
     float: left;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
-    margin-top: 9px;
+    margin-top: 8px;
 }
 .site-logo a::first-letter {
     font-weight: bold;
@@ -43,12 +48,12 @@ img {
     margin-bottom: 15px;
     height: auto;
     overflow: hidden;
-    padding-left: 0px;
+    padding-left: 65px;
 }
 .menu-item a {
     text-decoration: none;
 }
-.menu-item a {
+.menu-item {
     float: left;
     margin-right: 20px;
     text-transform: uppercase;
@@ -66,11 +71,6 @@ img {
 .menu-item a :focus {
     color: rgb(26, 188, 156);
 }
-.clearfix::after {
-    display: table;
-    content: '';
-    clear: both;
-}
 .headline {
     font-weight: bold;
     font-size: 48px;
@@ -81,23 +81,24 @@ img {
 .card {
     float: left;
     margin: 0 30px 70px 0;
-    position: relative; 
+    cursor: pointer;
 }
 .card-wrapper {
     height: 320px;
     width: 255px;
 }
 .card-picture {
-    position: absolute;
     object-fit: cover;
+    overflow: hidden;
     height: 280px;
     width: 255px;
 }
 .card-name {
     display: inline-block;
-    position: absolute;
     width: 200px;
-    height: 40px;
+    --h: 40px;
+    height: var(--h);
+    line-height: var(--h);
     background-color: #555252;
     bottom: 0px;
     text-transform: uppercase;
@@ -106,14 +107,16 @@ img {
     font-weight: bold;
     color: rgb(255, 255, 255);
     padding-left: 13px;
-    padding-top: 10px;
+    overflow: hidden;
 }
 .card-price {
     display: block;
-    position: absolute;
+    float: right;
     background-color: rgb(194, 182, 182);
     width: 55px;
-    height: 40px;
+    --h: 40px;
+    height: var(--h);
+    line-height: var(--h);
     bottom: 0px;
     left: 200px;
     text-transform: uppercase;
@@ -122,14 +125,15 @@ img {
     font-weight: bold;
     color: rgb(255, 255, 255);
     padding-left: 13px;
-    padding-top: 10px;
 }
 
 .card-wrapper:hover .card-price {
     background-color: rgb(127, 217, 199);
+    transition-duration: 0.3s;
 }
 .card-wrapper:hover .card-name {
     background-color: rgb(26, 188, 156);
+    transition-duration: 0.3s;
     }
 section.card:nth-child(4n) {
     margin-right: 0;
@@ -152,6 +156,7 @@ section.news-card:nth-child(3n) {
 }
 .news-card-picture {
     object-fit: cover;
+    overflow: hidden;
     height: 260px;
     width: 350px;
 }
@@ -184,4 +189,5 @@ section.news-card:nth-child(3n) {
     margin-top: 6px;
     border: none;
     border-radius: 5px;
+    overflow: hidden;
 }
