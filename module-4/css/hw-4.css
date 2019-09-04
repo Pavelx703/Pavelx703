@@ -23,6 +23,7 @@ img {
 .header {
     width: 1110px;
     height: 50px;
+    position: relative;
 }
 .site-logo a {
     text-transform: uppercase;
@@ -37,6 +38,11 @@ img {
 .site-logo a::first-letter {
     font-weight: bold;
     color: rgb(26, 188, 156);
+}
+.site-navigation {
+    position: absolute;
+    left: 645px;
+    top: 0px;
 }
 .menu .menu-item:last-child {
         margin-right: 0px;

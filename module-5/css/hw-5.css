@@ -11,3 +11,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+.clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}
