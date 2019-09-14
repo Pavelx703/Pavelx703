@@ -241,7 +241,6 @@ img {
     right: 50%;
     top: 50%;
     transform: translate(50%, -50%);
-    overflow: hidden;
 }
 .icon-button {
     border: solid 1px;
@@ -277,7 +276,7 @@ img {
 .icon-box-hover {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 43%);
+    transform: translate(-50%, 42%);
     bottom: 50%;
 }
 .icon-button:hover .button-img {
