@@ -24,7 +24,7 @@ img {
 }
 .header {
     height: 40px;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 .site-logo {
     margin: 0;
@@ -88,7 +88,7 @@ img {
     text-align: center;
     color: rgb(81, 81, 81);
     margin: 0 0 24px;
-    background-color: rgb(233, 240, 253);
+    /* background-color: rgb(233, 240, 253); */
 }
 .first-line::first-letter {
     text-transform: uppercase;
@@ -101,7 +101,7 @@ img {
     text-align: center;
     color: rgb(81, 81, 81);
     margin: 0;
-    background-color: rgb(233, 240, 253);
+    /* background-color: rgb(233, 240, 253); */
 }
 .second-line::after {
     display: block;
@@ -116,7 +116,7 @@ img {
     width: 380px;
     min-height: 100px;
     justify-content: space-around;
-    background-color: rgb(226, 226, 77);
+    /* background-color: rgb(226, 226, 77); */
     margin-bottom: 65px;
 }
 .card-icon {
@@ -124,7 +124,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    background-color: rgb(179, 111, 111);
+    /* background-color: rgb(179, 111, 111); */
 }
 .card-descr {
     width: 300px;
@@ -146,9 +146,6 @@ img {
     line-height: 24px;
     color: var(--text-color);
 }
-.team-page {
-    background-color: rgb(93, 36, 146);
-}
 .team-subtitle {
     margin: 0 130px;
     font-family: 'Roboto' ,sans-serif;
@@ -157,12 +154,16 @@ img {
     color: var(--text-color);
     text-align: center;
 }
+.employee-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 80px;
+}
 .employee-card {
     width: 380px;
-    margin: 0;
+    margin: 80px 0 0;
     position: relative;
-    /* background-color: var(--main-color); */
-
+    margin: 80px 0 0;
 }
 .employee-photo {
     width: 380px;
@@ -203,7 +204,7 @@ img {
     background: linear-gradient(to top, #f2e391, #ea8a89);
     position: absolute;
     right: 10px;
-    /* opacity: 0; */
+    opacity: 0.9;
     display: none;
 }
 
@@ -225,14 +226,83 @@ img {
     /* color: rgb(234, 138, 137); */
     /* color: rgb(242, 227, 145); */
 }
-.employee-img:hover .employee-card-hover {
+.employee-card:hover .employee-card-hover {
     /* transform: translate(-10px, -10px); */
     /* background-color: rgb(107, 55, 55); */
     display: flex;
 }
+.employee-card:hover .employee-img {
+    /* background-color: aqua; */
+    transform: translate(-10px, -10px);
+}
 .employee-card-hover:hover {
     display: flex;
+    
     /* transform: translate(-10px, -10px); */
     /* opacity: 0.5; */
     /* display: contents; */
+}
+.card-background {
+    position: absolute;
+    height: 470px;
+    width: 380px;
+    background-color: var(--main-color);
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.footer {
+    min-height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--text-color);
+}
+.footer-text {
+    /* margin: 0 130px; */
+    font-family: 'Montserrat' ,sans-serif;
+    font-size: 14px;
+    /* line-height: 24px; */
+    color: var(--name-color);
+    /* text-align: center; */
+
+}
+.footer-link {
+    color: var(--hover-color);
+
+}
+input {
+	
+    font-size: 13px;
+    /* padding: 12px; */
+    border: 1px solid var(--text-color);
+    
+    /* border-radius: 8px; */
+    /* font-size: 0; */
+    outline: 0;
+    margin: 0;
+}
+.input-text {
+    width: 230px;
+    font-size: 15px;
+    font-family: 'Roboto' ,sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--text-color);
+    border-right: none;
+    padding: 9px;
+}
+.input-submit {
+    width: 150px;
+    background: var(--main-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Montserrat' ,sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    color: white;
+    border-color: var(--main-color);
+}
+form {
+    font-size: 0;
 }
