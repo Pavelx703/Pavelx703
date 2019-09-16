@@ -32,8 +32,13 @@ img {
     top: 50%;
     transform: translateY(-50%);
 }
-.menu-item a {
+.menu-link {
     text-decoration: none;
+    color: rgb(15, 1, 1);
+}
+.menu-link:hover,
+.menu-link:focus {
+    color: rgb(26, 188, 156);
 }
 .menu-wrapper {
     position: absolute;
@@ -44,7 +49,6 @@ img {
 .menu {
     list-style: none;
     height: auto;
-    overflow: hidden;
     text-align: right;
 }
 .menu-item {
@@ -84,6 +88,10 @@ img {
     outline: none;
     cursor: pointer;
 }
+.slider-control:hover,
+.slider-control:focus {
+    opacity: 1;
+}
 .slider-control img {
     width: 104px;
     height: 104px;
@@ -101,7 +109,6 @@ img {
     text-transform: uppercase;
     color: rgb(255, 255, 255);
 } 
-
 .slider-description {
     position: absolute;
     top: 34%;
@@ -117,9 +124,13 @@ img {
 .slides-item {
     position: relative;
 }
+.fluid-container {
+    width: 1110px;
+    margin: auto;
+}
 .cards {
-    background-color: rgb(233, 240, 253);
-    width: 1600px;
+min-height: 676px;
+background-color: rgb(233, 240, 253);
 }
 .headline {
     font-weight: bold;
@@ -130,7 +141,6 @@ img {
     color: rgb(81, 81, 81);
     margin: 0;
     padding: 100px 0 80px;
-    background-color: rgb(233, 240, 253);
 }
 .headline::after{
     display: block;
