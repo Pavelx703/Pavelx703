@@ -58,6 +58,9 @@ img {
     width: auto;
     background-color: var(--hover-color);
 }
+.menu-item::after {
+    transition: display 2s linear;
+}
 .menu-link {
     text-decoration: none;
     color: var(--main-color);

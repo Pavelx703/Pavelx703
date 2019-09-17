@@ -25,80 +25,74 @@ img {
     width: 940px;
     margin: auto;
 }
-/* .site-logo {
+.site-logo {
     margin: 0;
-} */
-/* .site-logo .logo-img {
+}
+.site-logo .logo-img {
     height: 23px;
     width: 86px;
-} */
-/* .site-navigation {
+}
+.site-navigation {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin: 30px 0 0;
-} */
-/* .menu {
+    align-items: center;
+    margin: 50px 0 0;
+}
+.menu {
     list-style: none;
     width: 490px;
     display: flex;
     justify-content: space-between;
     margin: 0;
-} */
-/* .menu-item {
+}
+.menu-item {
     text-transform: uppercase;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-} */
-/* .menu-item:hover::after {
-    display: block;
-    content: "";
-    margin: 10px 0 0;
-    height: 3px;
-    width: auto;
-    background-color: var(--hover-color);
-} */
-/* .menu-link {
+}
+.menu-link {
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--name-color);
     transition: color .2s linear;
-} */
-/* .menu-link:hover {
-    color: var(--hover-color);
-} */
-/* .menu-link:hover,
-.menu-link:focus .menu-item::after {
-    opacity: 1;
-} */
-/* .services-page {
-    margin: 120px 0 0;
-} */
-/* .service-cards {
+}
+.menu-link:hover,
+.menu-link:focus,
+.menu-item::after {
+    color: var(--main-color);
+}
+.services-page {
+    margin: 120px auto 0;
+}
+.service-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-} */
-/* .first-line {
-    font-weight: normal;
-    font-size: 24px;
-    font-family: 'Kaushan Script', cursive;
-    text-align: center;
-    color: rgb(81, 81, 81);
-    margin: 0 0 24px;
-} */
+    margin: 75px auto 0;
+}
+
 /* .first-line::first-letter {
     text-transform: uppercase;
 } */
-/* .second-line {
+.page-title {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 34px;
+    line-height: 50px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     text-align: center;
-    color: rgb(81, 81, 81);
+    color: var(--name-color);
     margin: 0;
-} */
+}
+.page-descr {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+}
 /* .second-line::after {
     display: block;
     content: "";
@@ -107,13 +101,15 @@ img {
     width: 60px;
     background-color: var(--hover-color);
 } */
-/* .service-card {
+.service-card {
     display: flex;
-    width: 380px;
-    min-height: 100px;
-    justify-content: space-around;
-    margin-bottom: 65px;
-} */
+    width: 280px;
+    min-height: 230px;
+    flex-direction: column; 
+    justify-content: start;
+    align-items: center;
+    /* margin-bottom: 65px; */
+}
 /* .card-icon {
     width: 80px;
     display: flex;
@@ -124,115 +120,33 @@ img {
     width: 300px;
 
 } */
-/* .card-name {
+.card-name {
     margin: 0;
-    text-transform: uppercase;
-    font-size: 14px;
+    line-height: 75px;
+    font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: bold;
     color: var(--name-color);
-    padding-bottom: 20px;
-} */
-/* .card-text {
+}
+.card-text {
     margin: 0;
     font-family: 'Roboto' ,sans-serif;
     font-size: 14px;
     line-height: 24px;
     color: var(--text-color);
-} */
-/* .team-subtitle {
-    margin: 0 130px;
-    font-family: 'Roboto' ,sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--text-color);
     text-align: center;
-} */
-/* .employee-card-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 80px;
-} */
-/* .employee-card {
-    width: 380px;
-    margin: 80px 0 0;
-    position: relative;
-    margin: 80px 0 0;
-} */
-/* .employee-photo {
-    width: 380px;
-    height: 470px;
-    background-color: var(--main-color);
-} */
-/* .employee-img {
-    width: 380px;
-    height: 470px;
-    object-fit: cover;
-    transition: transform .2s linear;
-} */
-/* .employee-name {
-    margin: 25px 0 0;
-    font-family: 'Montserrat' ,sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--name-color);
-    text-align: center;
-    font-weight: 500;
-} */
-/* .employee-card-hover {
-    top: -10px;
-    height: 470px;
-    width: 380px;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top, #f2e391, #ea8a89);
-    position: absolute;
-    right: 10px;
-    opacity: 0.9;
-    display: none;
-} */
-/* .icon-wrapper {
-    display: flex;
-    transform: translate(70px, -348px);
-    opacity: 0;
-} */
-/* .social-icon {
-    width: 56px;
-    height: 56px;
-    background-color: rgb(252, 227, 138);
-    border: 1px solid;
-    border-style: hidden;
-    margin-right: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color .2s linear;
-} */
-/* .social-icon:hover {
-    background-color: var(--main-color);
-} */
-/* .employee-card:hover .employee-card-hover {
-    display: flex;
-} */
-/* .employee-card:hover .icon-wrapper {
-    opacity: 1;
-} */
-/* .employee-card:hover .employee-img {
-    transform: translate(-10px, -10px);
-} */
-/* .employee-card-hover:hover {
-    display: flex;
-} */
-/* .card-background {
-    position: absolute;
-    height: 470px;
-    width: 380px;
-    background-color: var(--main-color);
-    right: 0;
-    top: 0;
-    z-index: -1;
-} */
+}
+.contact_us-page {
+    min-height: 677px;
+    background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-7/pictures/MapImage.jpg?raw=true);
+    background-color: #fff;
+    margin-top: 130px;
+
+}
+.contact_us-title {
+    padding-top: 110px;
+    color: #fff;
+}
 /* .footer {
     min-height: 63px;
     display: flex;
@@ -254,32 +168,45 @@ img {
     outline: 0;
     margin: 0;
 } */
-/* .input-text {
-    width: 230px;
-    font-size: 15px;
+.form {
+    width: 940;
+    min-height: 210px;
+    display: flex;
+    justify-content: space-between;
+    margin: 75px 0 0;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-text {
+    width: 455px;
+    font-size: 14px;
     font-family: 'Roboto' ,sans-serif;
     font-weight: 100;
     font-style: italic;
     color: var(--text-color);
     border-right: none;
-    padding: 9px;
-} */
-/* .input-submit {
-    width: 150px;
+    padding: 14px;
+    border-radius: 4px;
+}
+.input-submit {
+    width: 240px;
     background: var(--main-color);
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
     font-family: 'Montserrat' ,sans-serif;
     font-weight: 600;
     padding: 10px;
     color: white;
     border-color: var(--main-color);
-} */
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+    transform: translateY(30px);
+}
 /* form {
     font-size: 0;
 } */
-.contactus-page {
-    height: 677px;
-    /* background-image: url(C:\Users\Паша\goit-fe-course\module-7\pictures\MapImage.jpg); */
-    background-color: #fff;
-}
