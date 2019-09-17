@@ -174,10 +174,10 @@ img {
     transform: translateY(30px);
 }
 .input-text:valid {
-    border-color: green;
+    outline-color: green;
   }
 .input-text:invalid {
-    border-color: red;
+    outline-color: red;
   }
 
 
