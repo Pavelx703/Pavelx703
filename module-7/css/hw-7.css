@@ -17,6 +17,18 @@ img {
     --text-color: rgb(119, 119, 119);
     --form-color: rgb(187, 187, 187);
 }
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/roboto-slab-v9-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
+         url('../fonts/roboto-slab-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-slab-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-slab-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-slab-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-slab-v9-latin-regular.svg#RobotoSlab') format('svg'); /* Legacy iOS */
+}
 .container-fluid {
     width: 1400px;
     margin: auto;
@@ -69,10 +81,6 @@ img {
     justify-content: space-between;
     margin: 75px auto 0;
 }
-
-/* .first-line::first-letter {
-    text-transform: uppercase;
-} */
 .page-title {
     font-weight: bold;
     font-size: 34px;
@@ -87,20 +95,12 @@ img {
     font-weight: normal;
     font-size: 16px;
     line-height: 25px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Slab';
     font-style: italic;
     text-align: center;
     color: var(--text-color);
     margin: 0;
 }
-/* .second-line::after {
-    display: block;
-    content: "";
-    margin: 40px auto 65px;
-    height: 3px;
-    width: 60px;
-    background-color: var(--hover-color);
-} */
 .service-card {
     display: flex;
     width: 280px;
@@ -108,18 +108,7 @@ img {
     flex-direction: column; 
     justify-content: start;
     align-items: center;
-    /* margin-bottom: 65px; */
 }
-/* .card-icon {
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-} */
-/* .card-descr {
-    width: 300px;
-
-} */
 .card-name {
     margin: 0;
     line-height: 75px;
@@ -139,35 +128,12 @@ img {
 .contact_us-page {
     min-height: 677px;
     background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-7/pictures/MapImage.jpg?raw=true);
-    background-color: #fff;
     margin-top: 130px;
-
 }
 .contact_us-title {
     padding-top: 110px;
-    color: #fff;
+    color: white;
 }
-/* .footer {
-    min-height: 63px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--text-color);
-} */
-/* .footer-text {
-    font-family: 'Montserrat' ,sans-serif;
-    font-size: 14px;
-    color: var(--name-color);
-} */
-/* .footer-link {
-    color: var(--hover-color);
-} */
-/* input {
-    font-size: 13px;
-    border: 1px solid var(--text-color);
-    outline: 0;
-    margin: 0;
-} */
 .form {
     width: 940;
     min-height: 210px;
@@ -180,15 +146,15 @@ img {
     flex-direction: column;
     justify-content: space-between;
 }
-
 .input-text {
+    text-transform: uppercase;
+    font-family: 'Montserrat' ,sans-serif;
+    font-weight: 600;
     width: 455px;
     font-size: 14px;
     font-family: 'Roboto' ,sans-serif;
     font-weight: 100;
-    font-style: italic;
     color: var(--text-color);
-    border-right: none;
     padding: 14px;
     border-radius: 4px;
 }
@@ -207,6 +173,11 @@ img {
     margin: auto;
     transform: translateY(30px);
 }
-/* form {
-    font-size: 0;
-} */
+.input-text:valid {
+    border-color: green;
+  }
+.input-text:invalid {
+    border-color: red;
+  }
+
+
