@@ -207,7 +207,7 @@ img {
     outline-color: red;
   }
 .input-text:focus {
-      background-color: var(--form-color);
+   background-color: rgb(236, 229, 122);
   }
 
 
