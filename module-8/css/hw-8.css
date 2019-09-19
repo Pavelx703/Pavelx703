@@ -291,3 +291,17 @@ input {
 form {
     font-size: 0;
 }
+.par {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* background-image: url(..\module-8\pictures\Layer6.jpg); */
+}
+.chi {
+    width: 40px;
+    height: 40px;
+   z-index: 10;
+
+}
