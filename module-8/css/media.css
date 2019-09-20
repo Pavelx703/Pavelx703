@@ -1,0 +1,36 @@
+@media (min-width: 480px) {
+    .header {
+        background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO768px.jpg?raw=true);
+    }
+    .site-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 40px 0;
+        flex-direction: row;
+    }
+    .site-logo {
+        margin: 0;
+    }
+    .page-descr {
+        margin: 20px auto 40px;
+        max-width: none;
+    }
+    .page-title {
+        margin: 130px auto 0;
+    }
+    .partner-cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 480px;
+    }
+}
+@media (min-width: 960px) {
+    .header {
+        background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO1440px.jpg?raw=true);
+    }
+    .partner-cards-wrapper {
+        max-width: 1440px;
+    }
+}
