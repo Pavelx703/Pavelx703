@@ -111,16 +111,13 @@ a.menu-link::after {
 .menu-link:hover {
     color: var(--hover-color);
 }
-
-
 .partners-page {
     min-width: 320px;
-    max-width: ;
+    max-width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 15px;
-
 }
 .partner-card-photo {
     width: 120px;
@@ -128,21 +125,19 @@ a.menu-link::after {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/Layer6.jpg?raw=true);
     border-radius: 60px;
     margin-left: auto;
     margin-right: auto;
-
 }
+.photo-layer1 {
+    background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/Layer6.jpg?raw=true);
+}
+
 .partner-card-link {
     width: 40px;
     height: 40px;
-   /* z-index: 10; */
- /* background-image: url(); */
- 
 }
 .card-item {
-
     text-align: center;
 }
 .card-button {
