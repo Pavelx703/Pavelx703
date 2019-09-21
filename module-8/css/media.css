@@ -1,13 +1,28 @@
 @media (min-width: 480px) {
     .header {
-        background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO768px.jpg?raw=true);
+        background-image: 
+        linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
+        url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO768px.jpg?raw=true);
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        min-height: 700px;
+    }
+    .page-title {
+        font-size: 52px;
+        max-width: 550px;
+    }
+    .page-descr {
+        font-size: 18px;
     }
     .site-navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 30px 40px 0;
+        margin: 30px auto;
         flex-direction: row;
+        max-width: 748px;
     }
     .site-logo {
         margin: 0;
@@ -28,9 +43,15 @@
 }
 @media (min-width: 960px) {
     .header {
-        background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO1440px.jpg?raw=true);
+        background-image:
+        linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
+         url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO1440px.jpg?raw=true);
     }
     .partner-cards-wrapper {
-        max-width: 1440px;
+        max-width: none;
+    }
+    .site-navigation {
+        max-width: 940px;
+        margin: 30px auto;
     }
 }

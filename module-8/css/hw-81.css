@@ -8,7 +8,7 @@ html {
 }
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 @font-face {
@@ -44,23 +44,23 @@ img {
          url('../fonts/roboto-v20-latin-300.woff') format('woff')
   }
 .container-fluid {
-    min-height: 540px;
-  }
-  .container {
-    margin: 0 auto;
-    text-align: center;
+    min-height: 700px;
   }
 .header {
     display: flex;
     flex-direction: column;
+    height: 540px;
     min-width: 320px;
     max-width: 100%;
-    background-image: 
-    linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
-    url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO320px.jpg?raw=true);
+    position: relative;
     background-size: cover;
-    box-shadow: inset 0 0 540px 0 rgba(0, 0, 0, 0.9);
+    /* box-shadow: inset 0 0 540px 0 rgba(0, 0, 0, 0.9); */
     margin-bottom: 70px;
+}
+.background-container {
+    position: absolute;
+    width: 100%;
+    min-height: 700px;
 }
 .site-logo {
     margin-top: 100px;
@@ -90,7 +90,7 @@ img {
 }
 .page-title {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 52px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     text-align: center;
