@@ -1,0 +1,209 @@
+/* html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+     box-sizing: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2')
+         url('../fonts/montserrat-v14-latin-regular.woff') format('woff')
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+         url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-latin-700.woff') format('woff')
+  }
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'),
+         url('../fonts/roboto-v20-latin-regular.woff') format('woff')
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'),
+         url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
+         url('../fonts/roboto-v20-latin-300.woff') format('woff')
+  }
+.container-fluid {
+    min-height: 540px;
+  }
+  /* .container {
+    margin: 0 auto;
+    text-align: center;
+  } */
+.header {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* min-width: 320px; */
+    /* max-width: 100%; */
+    background-image: 
+    linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
+    url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO320px.jpg?raw=true);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* box-shadow: inset 0 0 540px 0 rgba(0, 0, 0, 0.9); */
+    /* margin-bottom: 70px; */
+}
+.site-logo {
+    margin-top: 100px;
+}
+.site-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    justify-content: center;
+}
+.menu {
+    list-style: none;
+    width: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+.menu-item {
+        --h: 40px;
+        height: var(--h);
+        line-height: var(--h);
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        width: 100px;
+}
+.page-title {
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin: 40px auto 0;
+    max-width: 320px;
+}
+.page-descr {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0 auto 20px;
+    max-width: 220px;
+}
+.menu-link {
+    text-decoration: none;
+    color: white;
+}
+.menu-link:hover,
+.menu-link:focus {
+    border: 2px solid white;
+    --h: 40px;
+    height: var(--h);
+    line-height: var(--h);
+    border-radius: var(--h);
+    padding: 7px;
+}
+.partners-page {
+    min-width: 320px;
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+}
+.partners-cards-title {
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 20px;
+}
+.partner-card-photo {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo-layer1 {
+    background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/Layer1.jpg?raw=true);
+}
+.photo-layer2 {
+    background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/Layer2.png?raw=true);
+}
+.photo-layer3 {
+    background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/Layer3.png?raw=true);
+}
+.photo-layer4 {
+    background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/Layer4.png?raw=true);
+}
+.partner-card-link {
+    width: 40px;
+    height: 40px;
+}
+.card-item {
+    text-align: center;
+}
+.partners-card-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.partners-card-description {
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 220px;
+    margin: 0 0 30px;
+}
+.card-button {
+    border: 2px solid;
+    border-color: rgb(255, 78, 80);
+    color: rgb(255, 78, 80);
+    text-align: center;
+    width: 280px;
+    --h: 40px;
+    height: var(--h);
+    line-height: var(--h);
+    border-radius: calc(var(--h)/2);
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background-color: inherit;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+.card-button:focus {
+    background-color: rgb(255, 78, 80);
+    color: white;
+}
