@@ -4,70 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homework-8</title>
+    <title>Homework-9</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="stylesheet" href="css/hw-9.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
-<body class="container-fluid">
-    <header class="header container">
-        <div class="background-container">
-            <nav class="site-navigation">
-                <a href="#" class="site-logo">
-                    <img class="logo-img" src="..\module-8\pictures\URLAUBSGLÜCK.png" alt="logo">
-                </a>
-                <ul class="menu">
-                    <li class="menu-item"><a class="menu-link" href="#">Log in</a></li>
-                    <li class="menu-item"><a class="menu-link" href="#">Sign up</a></li>
-                </ul>
-            </nav>
-            <h2 class="page-title">share your holiday dreams</h2>
-            <p class="page-descr">And find the perfect partner to fullfill it</p>
-            <button class="card-button">Find your holiday partner</button>
-        </div>      
+<body>
+    <header class="header">
+        <div class="container-fluid background">
+            <div class="container">
+                <div class="row">
+                    <div class="site-navigation col-12 d-flex">
+                        <div class="col-12 col-md-6 col-md-3">
+                            <nav>
+                                <ul class="menu col-12 col-md-12 d-flex justify-content-center">
+                                    <li class="menu__item"><a class="menu__link d-flex justify-content-center align-items-center" href="#">Log in</a></li>
+                                    <li class="menu__item"><a class="menu__link d-flex justify-content-center align-items-center" href="#">Sign up</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="logo col-12 col-md-6 col-md-3">
+                            <a href="#"><img src="..\module-9\pictures\URLAUBSGLÜCK.png" alt="logo"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row title-wrapper">
+                    <h3 class="page-title col-12 text-center">share your holiday dreams</h3>
+                    <p class="page-descr col-12">And find the perfect partner to fullfill it</p>
+                    <button class="card-button col-12">Find your holiday partner</button>
+                </div>
+            </div>
+        </div>     
     </header>
-    <section class="partners-page">
-        <h3 class="partners-cards-title card-item">Meet a partner for your best holiday</h3>
-        <div class="partner-cards-wrapper">
-            <div class="partner-card">
-                <div class="partner-card-photo photo-layer1">
-                    <div class="partner-card-link">
-                        <a href="#"><img src="..\module-8\pictures\Shape1281.png" alt="1281"></a>
-                    </div>
+    <section class="cards">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row flex-column">
+                    <h3 class="col-12 partners-cards-title text-center">Meet a partner for your best holiday</h3>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="d-flex justify-content-end align-items-end partner-card-photo photo-layer1">
+                                <div class="partner-card-link">
+                                    <a href="#"><img src="..\module-8\pictures\Shape1281.png" alt="1281"></a>
+                                </div>
+                            </div>
+                            <p class="partners-card-name text-center">Bradley Hunter</p>
+                            <p class="partners-card-description text-center">Based in Chicago. I love playing tennis and loud music.</p>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="d-flex justify-content-end align-items-end partner-card-photo photo-layer2">
+                                <div class="card-img-container">
+                                    <a href="#"><img src="..\module-8\pictures\Shape155.png" alt="1281"></a>
+                                </div>
+                            </div>
+                            <p class="partners-card-name text-center">Bradley Hunter</p>
+                            <p class="partners-card-description text-center">I get my inspiration from nature and objects around me. I love playing tennis and loud music.</p>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="d-flex justify-content-end align-items-end partner-card-photo photo-layer3">
+                                <div class="partner-card-link">
+                                    <a href="#"><img src="..\module-8\pictures\Shape153.png" alt="1281"></a>
+                                </div>
+                            </div>
+                            <p class="partners-card-name text-center">Bradley Hunter</p>
+                            <p class="partners-card-description text-center">Based in Chicago. I love playing tennis and loud music.</p>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="d-flex justify-content-end align-items-end partner-card-photo photo-layer4">
+                                <div class="partner-card-link">
+                                    <a href="#"><img src="..\module-8\pictures\Shape170.png" alt="1281"></a>
+                                </div>
+                            </div>
+                            <p class="partners-card-name text-center">Bradley Hunter</p>
+                            <p class="partners-card-description text-center">Based in Chicago. I love playing tennis and loud music.</p>
+                        </div>
+                    </div>  
+                    <button class="col-12 card-button">See other partners</button>              
                 </div>
-                <p class="partners-card-name card-item">Bradley Hunter</p>
-                <p class="partners-card-description card-item">Based in Chicago. I love playing tennis and loud music.</p>
             </div>
-            <div class="partner-card">
-                <div class="partner-card-photo photo-layer2">
-                    <div class="card-img-container">
-                        <a href="#"><img src="..\module-8\pictures\Shape155.png" alt="1281"></a>
-                    </div>
-                </div>
-                <p class="partners-card-name card-item">Bradley Hunter</p>
-                <p class="partners-card-description card-item">I get my inspiration from nature and objects around me. I love playing tennis and loud music.</p>
-            </div>
-            <div class="partner-card">
-                <div class="partner-card-photo photo-layer3">
-                    <div class="partner-card-link">
-                        <a href="#"><img src="..\module-8\pictures\Shape153.png" alt="1281"></a>
-                    </div>
-                </div>
-                <p class="partners-card-name card-item">Bradley Hunter</p>
-                <p class="partners-card-description card-item">Based in Chicago. I love playing tennis and loud music.</p>
-            </div>
-            <div class="partner-card">
-                <div class="partner-card-photo photo-layer4">
-                    <div class="partner-card-link">
-                        <a href="#"><img src="..\module-8\pictures\Shape170.png" alt="1281"></a>
-                    </div>
-                </div>
-                <p class="partners-card-name card-item">Bradley Hunter</p>
-                <p class="partners-card-description card-item">Based in Chicago. I love playing tennis and loud music.</p>
-            </div>
-        </div>  
-        <button class="card-button">See other partners</button>              
+        </div>   
     </section>
 </body>
 </html>

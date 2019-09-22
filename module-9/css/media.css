@@ -1,22 +1,20 @@
-/* @media (min-width: 480px) {
-    .header {
-        background-image: 
-        linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
-        url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO768px.jpg?raw=true);
-        min-height: 540px;
-    }
-} */
 @media (min-width: 768px) {
     .container {
         min-height: 700px;
-    
     }
-    .header {
+    .background {
         background-image: 
         linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
         url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-9/pictures/VSO768px.jpg?raw=true);
-        /* min-height: 540px; */
-
+    }
+    .site-navigation {
+        margin: 30px auto;
+        flex-direction: row-reverse;
+        max-width: 748px;
+    }
+    .logo {
+        margin: 25px auto 0;
+        padding: 0 0 10px;
     }
     .page-title {
         font-size: 52px;
@@ -24,35 +22,15 @@
     }
     .page-descr {
         font-size: 18px;
-    }
-    .site-navigation {
-        /* display: flex; */
-        /* justify-content: space-between; */
-        /* align-items: center; */
-        margin: 30px auto;
-        flex-direction: row;
-        max-width: 748px;
-    }
-    .logo {
-        margin: 25px auto 0;
-        padding: 0 0 10px;
-    }
-    .page-descr {
         margin: 20px auto 40px;
         max-width: none;
     }
-    .page-title {
-        margin: 130px auto 0;
-    } 
-    /* .partner-cards-wrapper {
-        display: flex;
+    .partner-cards-wrapper {
         flex-wrap: wrap;
-        justify-content: center;
-        max-width: 480px;
-    } */
+    }
 }
 @media (min-width: 960px) {
-    .header {
+    .background {
         background-image:
         linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
          url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-9/pictures/VSO1440px.jpg?raw=true);

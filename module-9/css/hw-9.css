@@ -1,4 +1,4 @@
-/* html {
+html {
     box-sizing: border-box;
 }
 *,
@@ -10,7 +10,13 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-} */
+    margin: auto;
+}
+ul, li {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
@@ -43,65 +49,56 @@ img {
          url('../fonts/roboto-v20-latin-300.woff2') format('woff2'),
          url('../fonts/roboto-v20-latin-300.woff') format('woff')
   }
-.container-fluid {
-    min-height: 540px;
-  }
-  /* .container {
-    margin: 0 auto;
-    text-align: center;
-  } */
-.header {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* min-width: 320px; */
-    /* max-width: 100%; */
+.background {
     background-image: 
     linear-gradient(to bottom, hsla(0,0%,0%,.2), hsla(0,0%,0%,.3)),
-    url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/VSO320px.jpg?raw=true);
-    background-size: cover;
+    url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-9/pictures/VSO320px.jpg?raw=true);
+    min-height: 540px;
     background-repeat: no-repeat;
-    /* box-shadow: inset 0 0 540px 0 rgba(0, 0, 0, 0.9); */
-    /* margin-bottom: 70px; */
-}
-.site-logo {
-    margin-top: 100px;
+    background-size: cover;
 }
 .site-navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
 }
 .menu {
-    list-style: none;
-    width: 160px;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+    margin: 20px auto 100px;
 }
-.menu-item {
-        --h: 40px;
-        height: var(--h);
-        line-height: var(--h);
-        font-size: 14px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
-        width: 100px;
+.menu__item {
+    --h: 40px;
+    height: var(--h);
+    line-height: var(--h);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    width: 100px;
+}
+.menu__link {
+    text-decoration: none;
+    color: white;
+}
+.menu__link:hover,
+.menu__link:focus {
+    border: 2px solid white;
+    --h: 40px;
+    height: var(--h);
+    line-height: var(--h);
+    border-radius: var(--h);
+    padding: 7px;
+    color: white;
+    text-decoration: none;
+}
+.title-wrapper {
+    flex-direction: column;
 }
 .page-title {
     font-weight: 700;
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    text-align: center;
+    padding: 0;
     color: white;
-    margin: 40px auto 0;
+    margin: auto;
     max-width: 320px;
 }
 .page-descr {
@@ -112,44 +109,43 @@ img {
     text-align: center;
     color: white;
     margin: 0 auto 20px;
-    max-width: 220px;
+    max-width: 250px;
 }
-.menu-link {
-    text-decoration: none;
-    color: white;
-}
-.menu-link:hover,
-.menu-link:focus {
-    border: 2px solid white;
+.card-button {
+    border: 2px solid;
+    border-color: rgb(255, 78, 80);
+    color: rgb(255, 78, 80);
+    text-align: center;
+    max-width: 280px;
     --h: 40px;
     height: var(--h);
     line-height: var(--h);
-    border-radius: var(--h);
-    padding: 7px;
+    border-radius: calc(var(--h)/2);
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background-color: inherit;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    margin: auto;
 }
-.partners-page {
-    min-width: 320px;
-    max-width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 15px;
+.card-button:focus,
+.card-button:hover {
+    background-color: rgb(255, 78, 80);
+    color: white;
 }
 .partners-cards-title {
     font-weight: 700;
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
-    margin: 0 0 20px;
+    margin: 60px 0 20px;
 }
 .partner-card-photo {
     width: 120px;
     height: 120px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     border-radius: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 .photo-layer1 {
     background-image: url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-8/pictures/Layer1.jpg?raw=true);
@@ -182,28 +178,5 @@ img {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     max-width: 220px;
-    margin: 0 0 30px;
-}
-.card-button {
-    border: 2px solid;
-    border-color: rgb(255, 78, 80);
-    color: rgb(255, 78, 80);
-    text-align: center;
-    width: 280px;
-    --h: 40px;
-    height: var(--h);
-    line-height: var(--h);
-    border-radius: calc(var(--h)/2);
-    font-size: 14px;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    background-color: inherit;
-    outline: none;
-    padding: 0;
-    cursor: pointer;
-    margin-bottom: 60px;
-}
-.card-button:focus {
-    background-color: rgb(255, 78, 80);
-    color: white;
+    margin: 0 auto 30px;
 }
