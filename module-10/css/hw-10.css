@@ -30,12 +30,18 @@ img {
     --text-color: rgb(153, 153, 153);
     --hover-color: rgb(243, 129, 129);
 }
+
+.container-fluid {
+    background-image: 
+        linear-gradient(to bottom, rgba(233, 130, 131, 0.8), rgba(240, 217, 137, 0.9)),
+        url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-10/pictures/Eagle@x1.jpg?raw=true);
+    min-height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container {
     width: 1200px;
     margin: auto;
-}
-.header {
-    height: 40px;
 }
 .site-logo {
     margin: 0;
@@ -44,7 +50,7 @@ img {
     height: 23px;
     width: 86px;
 }
-.site-navigation {
+.page-nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -90,7 +96,7 @@ a.menu-link::after {
     opacity: 1;
 }
 .services-page {
-    margin: 120px 0 0;
+    margin-top: 120px;
 }
 .service-cards {
     display: flex;
