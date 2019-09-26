@@ -1,0 +1,596 @@
+/* Общие настройки html */
+ 
+html {
+    box-sizing: border-box;
+    font-size: 0;
+    font-weight: inherit;
+    }
+    
+     body {
+     margin: 0 auto;
+     padding: 0;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+    }
+ 
+   .list {
+     list-style: none;
+     list-style-type: none;
+     list-style-position: inside;
+     padding: 0;
+     margin: 0;
+   }
+ 
+   /* Обвертка*/
+   
+   .container-fluid {
+   height: 100%;
+   }
+ 
+   /*Контейне*/
+ 
+   .container {
+     max-width: 1200px;
+     }
+ 
+   .no-gutter {
+         padding-left: 0px;
+         padding-right: 0px;
+       }
+       
+   .padding-15 {
+         padding-left: 15px;
+         padding-right: 15px;
+       }
+ 
+       /* Хеддер */
+ 
+    .banner {
+       height: 1000px;
+       background-image: -webkit-gradient(
+       linear,
+       left bottom,
+       left top,
+       from(rgba(252, 227, 138, 0.9)),
+       to(rgba(243, 129, 129, 0.9))
+       ),
+       url("../img/other/eagle.png");
+       background-image: -o-linear-gradient(
+       bottom,
+       rgba(252, 227, 138, 0.9),
+       rgba(243, 129, 129, 0.9)
+       ),
+       url("../img/other/eagle.png");
+       background-image: linear-gradient(
+       to top,
+       rgba(252, 227, 138, 0.9),
+       rgba(243, 129, 129, 0.9)
+       ),
+       url("../img/other/eagle.png");
+       background-size: cover;
+       background-repeat: no-repeat;
+       margin-left: -150px;
+       margin: 0 auto;
+     }
+ 
+ @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+   only screen and (-o-min-device-pixel-ratio: 3/2),
+   only screen and (min-resolution: 1.5dppx) {
+   .banner {
+     background-image: -webkit-gradient(
+         linear,
+         left bottom,
+         left top,
+         from(rgba(252, 227, 138, 0.9)),
+         to(rgba(243, 129, 129, 0.9))
+       ),
+       url("../img/other/eagle@2X.png");
+     background-image: -o-linear-gradient(
+         bottom,
+         rgba(252, 227, 138, 0.9),
+         rgba(243, 129, 129, 0.9)
+       ),
+       url("../img/other/eagle@2X.png");
+     background-image: linear-gradient(
+         to top,
+         rgba(252, 227, 138, 0.9),
+         rgba(243, 129, 129, 0.9)
+       ),
+       url("../img/other/eagle@2X.png");
+   }
+ }
+ 
+ /* Панель навигации */
+ 
+   .page-nav {
+     padding: 0;
+     padding-top: 29px;
+   }
+   
+   .site-logo__img {
+     width: 85px;
+     height: 21px;
+   }
+   
+   .flex {
+     display: flex;
+     justify-content: space-between;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     -ms-flex-wrap: nowrap;
+     flex-wrap: nowrap;
+     -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+   }
+   
+   .site-navigation__item {
+     display: block;
+     height: 33.733px;
+     line-height: 28px;
+   }
+   
+   .site-navigation__link {
+     font-family: "Montserrat", sans-serif;
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 27px;
+     color: white;
+     text-transform: uppercase;
+   }
+   
+   .site-navigation__link:hover {
+     color: #fce38a;
+     text-decoration: none;
+   }
+   
+   .site-navigation__link:hover:after {
+     content: "";
+     display: block;
+     width: 100%;
+     height: 3px;
+     background: #fce38a;
+     margin-top: 10px;
+   }
+   
+        /* SVG */
+ 
+    .site-navigation__icon {
+     width: 18px;
+     height: 18px;
+     fill: white;
+     position: absolute;
+     top: 25%;
+   }
+   
+   .site-navigation__icon:hover {
+     fill: #fce38a;
+   }
+   
+   /* Выставляем и стилизируем надписи в Хедер */
+ 
+    .page-header__title {
+     font-size: 72px;
+     color: white;
+     margin-top: 164px;
+     text-transform: capitalize;
+     font-family: "Kaushan Script", cursive;
+     font-weight: 400;
+     text-align: center;
+     max-width: 100%;
+   }
+   
+   .page-header__subtitle {
+     font-size: 150px;
+     color: white;
+     margin-top: 47px;
+     text-transform: uppercase;
+     text-align: center;
+     line-height: 140px;
+     max-width: 100%;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 700;
+     letter-spacing: 0;
+   }
+   
+   .page-header__btn {
+     min-width: 154px;
+     height: 35px;
+     background: transparent;
+     font-size: 14px;
+     color: white;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 700;
+     text-transform: uppercase;
+     border: 3px solid white;
+     margin-top: 125px;
+     margin-bottom: 278px;
+   }
+   
+   .page-header__btn:hover {
+     background: #fce38a;
+   }
+   
+   /* 3. Работаем с блоком Service */
+ 
+   .section__title {
+     font-size: 24px;
+     color: #333333;
+     text-align: center;
+     font-family: "Kaushan Script", cursive;
+     font-weight: 400;
+   }
+   
+   .section__title::first-letter {
+     text-transform: uppercase;
+   }
+   
+   .section__subtitle {
+     font-size: 30px;
+     color: #333333;
+     margin-top: 21px;
+     text-align: center;
+     font-family: "Kaushan Script", cursive;
+     font-weight: 400;
+     text-transform: uppercase;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 700;
+   }
+   
+   .section__subtitle:after {
+     display: block;
+     content: "";
+     width: 60px;
+     height: 3px;
+     background: #f38181;
+     margin: 40px auto 0 auto;
+   }
+   
+   .margin-top {
+     margin-top: 66px;
+   }
+   
+   .service__item {
+     min-width: 80px;
+     height: 170px;
+   }
+   
+   .service__item--icon {
+     width: 32px;
+     height: 32px;
+     fill: #95e1d3;
+     text-align: right;
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+   }
+   
+   .service__item--icon:hover {
+     fill: #fce38a;
+   }
+   
+   .service__title {
+     font-size: 14px;
+     color: #333333;
+     text-transform: uppercase;
+     word-wrap: break-word;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 400;
+     line-height: 1;
+   }
+   
+   .service__text {
+     font-size: 15px;
+     color: #999999;
+     line-height: 24px;
+     word-wrap: break-word;
+     font-family: "Roboto", sans-serif;
+     font-weight: 400;
+     margin-top: 17px;
+     margin-bottom: 90px;
+   }
+   
+   /*Блок Команда */
+ 
+   .correct {
+     text-align: center;
+     margin-top: 27px;
+   }
+   
+   /* Обертка блока Команда */
+ 
+   .employee {
+     max-width: 380px;
+     height: 470px;
+     background-color: #95e1d3;
+     position: absolute;
+   }
+   
+   /* Накладываем на фото градиент */
+ 
+   .employee__grad {
+     width: 100%;
+     height: 470px;
+     position: absolute;
+     top: 0;
+     opacity: 0;
+   }
+   
+   /* Задаем условие animation */
+ 
+   @-webkit-keyframes move {
+     from {
+     }
+     to {
+       margin-top: -10px;
+       margin-left: -10px;
+     }
+   }
+   @keyframes move {
+     from {
+     }
+     to {
+       margin-top: -10px;
+       margin-left: -10px;
+     }
+   }
+   
+   /* Устанавливаем анимацию */
+   .employee:hover .employee__img1 {
+     -webkit-animation-duration: 0.2s;
+     animation-duration: 0.2s;
+     -webkit-animation-name: move;
+     animation-name: move;
+     -webkit-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+   }
+   
+   .employee:hover .employee__img2 {
+     -webkit-animation-duration: 0.2s;
+     animation-duration: 0.2s;
+     -webkit-animation-name: move;
+     animation-name: move;
+     -webkit-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+   }
+   
+   .employee:hover .employee__img3 {
+     -webkit-animation-duration: 0.2s;
+     animation-duration: 0.2s;
+     -webkit-animation-name: move;
+     animation-name: move;
+     -webkit-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+   }
+   
+   .employee:hover .employee__grad {
+     background: -webkit-gradient(
+       linear,
+       left bottom,
+       left top,
+       from(#fce38a),
+       to(#f38181)
+     );
+     background: -o-linear-gradient(bottom, #fce38a, #f38181);
+     background: linear-gradient(to top, #fce38a, #f38181);
+     opacity: 0.9;
+     -webkit-animation-duration: 0.2s;
+     animation-duration: 0.2s;
+     -webkit-animation-name: move;
+     animation-name: move;
+     -webkit-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+   }
+   
+   .employee__name {
+     font-size: 14px;
+     color: #333333;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 400;
+     text-transform: uppercase;
+     text-align: center;
+     margin-top: 31px;
+     position: relative;
+     top: 500px;
+   }
+   
+   .employee__position {
+     font-size: 15px;
+     color: #999999;
+     font-family: "Roboto", sans-serif;
+     font-weight: 300;
+     text-transform: capitalize;
+     text-align: center;
+     margin-top: 12px;
+     font-style: italic;
+     position: relative;
+     top: 500px;
+   }
+   
+   /* Структурируем расположение иконок  */
+ 
+   .socials {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     justify-content: center;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+     -ms-flex-direction: row;
+     flex-direction: row;
+     position:absolute;
+   Left: 50%;
+   Right: 50%;
+   top: 50%;
+   bottom: 50%;
+   Transform: translate (-50%, -50%);
+   opacity: 1;
+   }
+   
+   /* Устанавливаем анимацию */
+   .employee:hover .socials {
+     -webkit-animation-duration: 0.2s;
+     animation-duration: 0.2s;
+     -webkit-animation-name: move;
+     animation-name: move;
+     -webkit-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+   } 
+   
+   /* Стилизируем SVG */
+ 
+   .socials__item {
+     width: 56px;
+     height: 56px;
+     background-color: #fce38a;
+     margin-right: 2px;
+     position: relative;
+     opacity: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+ 
+   .employee:hover .socials__item {
+     opacity: 1;
+   }
+ 
+   .socials__item:hover {
+     background-color: #f38181;
+   }
+   
+   .socials__icon {
+     width: 25px;
+     height: 25px;
+     fill: #f38181;
+   }
+   
+   .socials__item:hover .socials__icon {
+     fill: white;
+   } 
+   
+   /* Блок Футтер */
+   .footer__line {
+     max-width: 1200px;
+     border-top: 1px solid #e5e5e5;
+     position: relative;
+     top: 584px;
+   }
+   
+   .footer__wrapper {
+     height: 60px;
+     position: relative;
+     top: 584px;
+   }
+   
+   .footer__text {
+     font-size: 14px;
+     color: #333333;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 400;
+     line-height: 60px;
+   }
+   
+   .footter__text--color {
+     color: #f38181;
+   }
+   
+   /* Убираем отступы между формами (кнопками) */
+ 
+   .footer__form {
+     font-size: 0;
+   }
+   
+   .footer__mail {
+     width: 228px;
+     height: 38px;
+     font-size: 15px;
+     color: black;
+     border: 1px solid #cccccc;
+     outline: none;
+     padding-left: 13px;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     font-family: "Roboto", sans-serif;
+     font-weight: 400;
+   }
+   
+   input[type="email"]::-webkit-input-placeholder {
+     font-size: 15px;
+     color: #cccccc;
+     text-transform: uppercase;
+     font-family: "Roboto", sans-serif;
+     font-weight: 300;
+     font-style: italic;
+   }
+   
+   input[type="email"]::-moz-placeholder {
+     font-size: 15px;
+     color: #cccccc;
+     text-transform: uppercase;
+     font-family: "Roboto", sans-serif;
+     font-weight: 300;
+     font-style: italic;
+   }
+   
+   input[type="email"]:-ms-input-placeholder {
+     font-size: 15px;
+     color: #cccccc;
+     text-transform: uppercase;
+     font-family: "Roboto", sans-serif;
+     font-weight: 300;
+     font-style: italic;
+   }
+   
+   input[type="email"]::-ms-input-placeholder {
+     font-size: 15px;
+     color: #cccccc;
+     text-transform: uppercase;
+     font-family: "Roboto", sans-serif;
+     font-weight: 300;
+     font-style: italic;
+   }
+   
+   input[type="email"]::placeholder {
+     font-size: 15px;
+     color: #cccccc;
+     text-transform: uppercase;
+     font-family: "Roboto", sans-serif;
+     font-weight: 300;
+     font-style: italic;
+   }
+   
+   input[type="email"]:valid:not(:placeholder-shown) {
+     -webkit-box-shadow: 0 0 0 1px green;
+     box-shadow: 0 0 0 1px green;
+   }
+   
+   input[type="email"]:invalid:not(:placeholder-shown) {
+     -webkit-box-shadow: 0 0 0 1px red;
+     box-shadow: 0 0 0 1px red;
+   }
+   
+   .footer__btn {
+     width: 150px;
+     height: 38px;
+     color: white;
+     background-color: #95e1d3;
+     font-size: 14px;
+     border: none;
+     outline: none;
+     text-transform: uppercase;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 700;
+     -webkit-box-shadow: none;
+     box-shadow: none;
+   }
+   
+   .footer__btn:hover {
+     background-color: #fce38a;
+   }
