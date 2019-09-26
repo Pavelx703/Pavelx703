@@ -1,0 +1,28 @@
+.first-line {
+    font-weight: normal;
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    margin: 0 0 24px;
+ 
+    &::first-letter {
+       text-transform: uppercase;
+    }
+ }
+ 
+ .second-line {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+ }
+ .underline::after {
+   display: block;
+   content: "";
+   margin: 40px auto 65px;
+   height: 3px;
+   width: 60px;
+   background-color:  $more-color;
+}

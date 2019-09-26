@@ -1,0 +1,65 @@
+.menu {
+    list-style: none;
+    width: 490px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 18px;
+ 
+    &__item {
+       text-transform: uppercase;
+       font-size: 14px;
+       font-family: 'Montserrat', sans-serif;
+       font-weight: 500;
+ 
+       &:hover::after {
+          display: block;
+          content: "";
+          margin: 10px 0 0;
+          height: 3px;
+          width: auto;
+          background-color: $hover-color;
+          transition: width 2s linear;
+       }
+    }
+    &__icon {
+       width: 18px;
+       height: 18px;
+       fill: $white-color;
+       position: absolute;
+ 
+       &:hover,
+       &:focus .menu__icon::after {
+          opacity: 1;
+       }
+ 
+       &:hover {
+          fill: $hover-color;
+       }
+ 
+       &:hover::after {
+          display: block;
+          content: "";
+          margin: 10px 0 0;
+          height: 3px;
+          width: 18px;
+          background-color:$hover-color;
+          transition: width 2s linear;
+       }
+    }
+    &__link {
+       text-decoration: none;
+       color: $white-color;
+       transition: color .2s linear;
+ 
+       &:hover,
+       &:focus .menu-item::after {
+          opacity: 1;
+          color: $hover-color;
+       }
+    }
+ }
+ a.menu__link::after {
+    transition: background-color 2s linear;
+    transition: width 2s linear;
+    transition: all 2s linear;
+ }

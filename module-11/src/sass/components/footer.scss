@@ -1,0 +1,16 @@
+.footer {
+    min-height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $text-color;
+ 
+    &__text {
+       font-family: 'Montserrat', sans-serif;
+       font-size: 14px;
+       color: $name-color;
+    }
+    &__link {
+       color: $more-color;
+    }
+ }

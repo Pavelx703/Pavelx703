@@ -3,4 +3,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 1000px;
+    background-position: center;
+ }
+ @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .container-fluid {
+        background-image: 
+        linear-gradient(to bottom, rgba(233, 130, 131, 0.8), rgba(240, 217, 137, 0.9)),
+        url(https://github.com/Pavelx703/goit-fe-course/blob/master/module-10/pictures/eagle@x2.jpg?raw=true);
+    }
  }

@@ -1,0 +1,34 @@
+.header {
+
+    &__first-line {
+       font-size: 72px;
+       color: $white-color;
+       margin-top: 165px;
+       text-transform: capitalize;
+    }
+    &__second-line {
+       font-size: 150px;
+       color: $white-color;
+       margin-top: 47px;
+       line-height: 140px;
+    }
+    &__button {
+       display: block;
+       min-width: 154px;
+       height: 35px;
+       background: transparent;
+       font-size: 14px;
+       color: $white-color;
+       font-family: "Montserrat", sans-serif;
+       font-weight: 700;
+       text-transform: uppercase;
+       border: 3px solid $white-color;
+       outline: none;
+       margin: 125px auto 278px;
+ 
+       &:hover {
+          background-color: $hover-color;
+       }
+ 
+    }
+ }
