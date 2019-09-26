@@ -391,6 +391,13 @@ form {
   font-size: 0;
 }
 
+ul,
+li {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+
 .container {
   width: 1200px;
   margin: auto;
