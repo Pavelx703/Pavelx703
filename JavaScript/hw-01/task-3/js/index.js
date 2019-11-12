@@ -1,7 +1,19 @@
-"use strict";
+'use strict';
 
-const name = 'Генератор защитного поля'
-let price = 1000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
-price = 2000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
+const ADMIN_PASSWORD = 'jqueryismyjam';
+let message;
+let invite = prompt('Введите пароль', 'пароль');
+console.log(message, invite);
+if (invite === null) {
+  message = 'Отменено пользователем!';
+  console.log(message, invite);
+}
+if (invite === ADMIN_PASSWORD) {
+  message = 'Добро пожаловать!';
+  console.log(message, invite);
+} else {
+  message = 'Доступ запрещен, неверный пароль!';
+  console.log(message, invite);
+}
+console.log(message, invite);
+alert(message);
