@@ -1,7 +1,15 @@
-"use strict";
+'use strict';
 
-const name = 'Генератор защитного поля'
-let price = 1000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
-price = 2000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
+const credits = 23580;
+const pricePerDroid = 3000;
+let invite = prompt('Ваш заказ: ', 'количество дроидов');
+let totalPrice = invite * pricePerDroid;
+
+if (invite === null) {
+  console.log('Отменено пользователем!');
+} else if (totalPrice > credits) {
+  console.log('Недостаточно средств на счету!');
+} else {
+  let rest = credits - totalPrice;
+  console.log(`Вы купили ${invite} дроидов, на счету осталось ${rest} кредитов.`);
+}

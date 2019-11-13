@@ -7,8 +7,7 @@ console.log(message, invite);
 if (invite === null) {
   message = 'Отменено пользователем!';
   console.log(message, invite);
-}
-if (invite === ADMIN_PASSWORD) {
+} else if (invite === ADMIN_PASSWORD) {
   message = 'Добро пожаловать!';
   console.log(message, invite);
 } else {

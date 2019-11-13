@@ -1,7 +1,17 @@
-"use strict";
+'use strict';
 
-const name = 'Генератор защитного поля'
-let price = 1000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
-price = 2000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
+let input;
+let total = 0;
+while (true) {
+  input = prompt('Введите число', '');
+  if (input === null) {
+    alert(`Общая сумма чисел равна ${total}`);
+    break;
+  }
+  input = Number(input);
+  if (Number.isNaN(input)) {
+    alert('Было введено не число,попробуйте еще раз');
+    continue;
+  }
+  total += Number(input);
+}
