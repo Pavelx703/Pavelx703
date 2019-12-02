@@ -8,13 +8,8 @@ while (input !== null) {
 	input = prompt('Введите число', '');
 
 	if (input === null) {
-		for (let i of numbers) {
-			total += i;
-		}
-		console.log(`Общая сумма чисел равна ${total}`);
 		break;
 	}
-
 	input = Number(input);
 	if (Number.isNaN(input)) {
 		alert('Было введено не число,попробуйте еще раз');
@@ -22,3 +17,7 @@ while (input !== null) {
 	}
 	numbers.push(input);
 }
+for (let i of numbers) {
+	total += i;
+}
+console.log(`Общая сумма чисел равна ${total}`);

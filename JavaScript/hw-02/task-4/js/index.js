@@ -1,11 +1,14 @@
 'use strict';
 
-function formatString(string, limit) {
-	limit = 40;
-	if (string.length <= limit) return string;
-	string = string.slice(0, limit);
-	return string + '...';
-}
+// function formatString(string, limit) {
+// 	limit = 40;
+// 	if (string.length <= limit) return string;
+// 	string = string.slice(0, limit);
+// 	return string + '...';
+// }
+
+const formatString = (string, maxLength = 40) =>
+	string.length <= maxLength ? string : `${string.slice(0, maxLength)}...`;
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 // вернется оригинальная строка
