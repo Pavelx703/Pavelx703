@@ -1,7 +1,13 @@
-"use strict";
+'use strict';
 
-const name = 'Генератор защитного поля'
-let price = 1000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
-price = 2000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
+const calculateEngravingPrice = function(message, pricePerWord) {
+	return message.split(' ').length * pricePerWord;
+};
+
+console.log(calculateEngravingPrice('Prin soc nato et manis part moes mus', 50));
+
+console.log(calculateEngravingPrice('Prin socs naue et magn par mones mus', 20));
+
+console.log(calculateEngravingPrice('Done orci lectus aliqm est', 40));
+
+console.log(calculateEngravingPrice('Donec orci lectus aliam est', 20));

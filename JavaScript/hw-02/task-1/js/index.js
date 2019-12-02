@@ -1,7 +1,10 @@
-"use strict";
+'use strict';
 
-const name = 'Генератор защитного поля'
-let price = 1000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
-price = 2000
-console.log(`Выбран ${name}, цена за штуку ${price} кредитов`)
+const logItems = ['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong'];
+
+// const logItems = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+for (let i = 0; i < logItems.length; i += 1) {
+	console.log(`${i + 1} - ${logItems[i]}`);
+}
+
