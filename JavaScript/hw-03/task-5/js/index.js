@@ -1,13 +1,13 @@
 'use strict';
 
 const getAllPropValues = (arr, prop) => {
-	let arr2 = [];
+	let propValuesArr = [];
 	for (let product of products) {
-		if (product[prop] !== undefined) {
-			arr2.push(product[prop]);
+		if (prop in product) {
+			propValuesArr.push(product[prop]);
 		}
 	}
-	return arr2;
+	return propValuesArr;
 };
 
 const products = [

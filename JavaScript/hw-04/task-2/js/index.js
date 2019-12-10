@@ -1,13 +1,34 @@
 'use strict';
 
-const calculateEngravingPrice = function(message, pricePerWord) {
-	return message.split(' ').length * pricePerWord;
+// Исправь ошибки которые будут в консоли, чтобы скрипт заработал.
+
+const inventory = {
+	items: ['Knife', 'Gas mask'],
+	add(itemName) {
+		console.log(`Adding ${itemName} to inventory`);
+
+		this.items.push(itemName);
+	},
+	remove(itemName) {
+		console.log(`Removing ${itemName} from inventory`);
+
+		this.items = this.items.filter(item => item !== itemName);
+	},
 };
 
-console.log(calculateEngravingPrice('Prin soc nato et manis part moes mus', 50));
+const invokeInventoryAction = function(itemName, action) {
+	console.log(`Invoking action on ${itemName}`);
+	action(itemName);
+};
 
-console.log(calculateEngravingPrice('Prin socs naue et magn par mones mus', 20));
+invokeInventoryAction('Medkit', inventory.add);
+// Invoking action on Medkit
+// Adding Medkit to inventory
 
-console.log(calculateEngravingPrice('Done orci lectus aliqm est', 40));
+console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
 
-console.log(calculateEngravingPrice('Donec orci lectus aliam est', 20));
+invokeInventoryAction('Gas mask', inventory.remove);
+// Invoking action on Gas mask
+// Removing Gas mask from inventory
+
+console.log(inventory.items); // ['Knife', 'Medkit']
