@@ -32,18 +32,5 @@ console.log(calculateTotalPrice(products, 'name')); // 5200
 console.log(calculateTotalPrice(products, 'price')); // 2800
 
 const combine = (names, prices) => {
-	// const combined = [];
-	const obj = {};
-	for (let i = 0; i < names.length; i += 1) {
-		console.log(names);
-		console.log(prices);
-
-		const obj = {
-			name: names[i],
-			price: prices[i],
-		};
-	}
-	return obj;
+	const combined = [];
 };
-
-console.log(combine(names, prices));

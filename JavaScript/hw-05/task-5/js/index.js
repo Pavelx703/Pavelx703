@@ -1,35 +1,94 @@
 'use strict';
 
-// function checkForSpam(str) {
-// 	str = str.toLowerCase();
-// 	const forbiddenWordFirst = 'spam';
-// 	const forbiddenWordSecond = 'sale';
-// 	if (str.includes(forbiddenWordFirst) || str.includes(forbiddenWordSecond)) return true;
-// 	else return false;
-// }
-// const checkForSpam = str => {
-// 	const source = str.toLowerCase();
-// 	return source.includes('spam') || source.includes('sale');
-// };
+// Напиши класс Car с указанными свойствами и методами.
 
-// Продвинутый пример с использованием замыкания
-// 	- частичное применение функций(будем еще учить):
-const checkForSpam = setSpamWords('spam', 'sale');
-function setSpamWords(...spamWords) {
-	return function checkInclude(s) {
-		const arg = [...spamWords];
-		s = s.toLowerCase();
-		for (let i = 0; i < arg.length; i += 1) {
-			if (s.includes(arg[i])) return true;
-		}
-		return false;
-	};
+class Car {
+	
+	constructor(items) {
+		this.items = items;
+	}
+	getItems = () => this.items;
+
+	addItem = newItem => this.items.push(newItem);
+
+	removeItem(oldItem) {
+		this.items = this.items.filter(item => item !== oldItem);
+	}
+}
+Car.prototype.increment = function () {
+	this.value += this.step
+}
+	//  * Добавь статический метод `getSpecs(car)`,
+	//  * который принимает объект-машину как параметр и выводит
+	//  * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
+	//  */
+
+	/*
+	 * Конструктор получает объект настроек.
+	 *
+	 * Добавь свойства будущеего экземпляра класса:
+	 *  speed - текущая скорость, изначально 0
+	 *  price - цена автомобиля
+	 *  maxSpeed - максимальная скорость
+	 *  isOn - заведен ли автомобиль, значения true или false. Изначально false
+	 *  distance - общий киллометраж, изначально 0
+	 */
+	constructor() {}
+
+	/*
+	 * Добавь геттер и сеттер для свойства price,
+	 * который будет работать с свойством цены автомобиля.
+	 */
+
+	/*
+	 * Добавь код для того чтобы завести автомобиль
+	 * Записывает в свойство isOn значение true
+	 */
+	turnOn() {}
+
+	/*
+	 * Добавь код для того чтобы заглушить автомобиль
+	 * Записывает в свойство isOn значение false,
+	 * и сбрасывает текущую скорость в 0
+	 */
+	turnOff() {}
+
+	/*
+	 * Добавялет к свойству speed полученное значение,
+	 * при условии что результирующая скорость
+	 * не больше чем значение свойства maxSpeed
+	 */
+	accelerate(value) {}
+
+	/*
+	 * Отнимает от свойства speed полученное значение,
+	 * при условии что результирующая скорость не меньше нуля
+	 */
+	decelerate(value) {}
+
+	/*
+	 * Добавляет в поле distance киллометраж (hours * speed),
+	 * но только в том случае если машина заведена!
+	 */
+	drive(hours) {}
 }
 
-console.log(checkForSpam('Latest technology news')); // false
+const mustang = new Car({ maxSpeed: 200, price: 2000 });
 
-console.log(checkForSpam('JavaScript weekly newsletter')); // false
+mustang.turnOn();
+mustang.accelerate(50);
+mustang.drive(2);
 
-console.log(checkForSpam('Get best sale offers now!')); // true
+Car.getSpecs(mustang);
+// maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000
 
-console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+mustang.decelerate(20);
+mustang.drive(1);
+mustang.turnOff();
+
+Car.getSpecs(mustang);
+// maxSpeed: 200, speed: 30, isOn: false, distance: 130, price: 2000
+
+console.log(mustang.price); // 2000
+mustang.price = 4000;
+console.log(mustang.price); // 4000

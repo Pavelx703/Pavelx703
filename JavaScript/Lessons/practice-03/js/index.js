@@ -1,60 +1,186 @@
 'use strict';
 
-// 6 ложных(falsy) значений, приводящихся к false
-// в логическом преобразовании:
+// import { resolve } from "dns";
 
-//             0
-//            NaN
-//            null
-//          undefined
-//       пустая строка: "" или ''
-//            false
+// const animateString = (str, cb) => {
+// 	let a = '';
+// 	let i = 0;
+// 	const p = document.createElement('p');
+// 	document.body.append(p);
+// 	document.body.scrollTop = document.body.offsetHeight;
+//     animateLetter()
+//         return new Promise(executor(resolve) => {
 
-// Абсолютно все остальное приводится к true.
-
-// function formatString(string, limit) {
-// 	limit = 40;
-// 	if (string.length <= limit) return string;
-// 	string = string.slice(0, limit);
-// 	// const lastSpace = string.lastIndexOf(' ');
-// 	// if (lastSpace > 0) {
-// 	// 	string = string.substr(0, lastSpace);
-// 	// }
-// 	//в случае, если надо обрезать до последнего целого слова
-// 	return string + '...';
-// }
-// воля 239
-// газ
-// электро(текущ 28665)(предыдущ 28290)(разница 7)
-// гор вода(текущ 7.8)(предыдущ 1.3)(разница 7)
-// отопление
-// хол вода(текущ 16.3)(предыдущ 12.1)(разница 4)
-// ГИОЦ
-
-// =======Передача функции как аргумента
-
-// function repeat(n, action) {
-// 	for (let i = 0; i < n; i += 1) {
-// 		action(i);
+// 	function animateLetter()
+// 		a += str[i];
+// 		i++;
+// 		p.textContent = a;
+// 		const timer = setTimeout(animateLetter, 150);
+// 		if (i === str.length) {
+// 			clearTimeout(timer);
+// 			resolve();
+// 		}
 // 	}
-// }
-// repeat(5, console.log);
+// };
+// // animateString('111111111111111', () =>
+// // 	animateString('111111111111222', () =>
+// // 		animateString('221111111111112', () =>
+// // 			animateString('211111111122', () => animateString('211111111122')),
+// // 		),
+// // 	),
+// // );
+// const animePromise()
 
-//  ======= метод Object.entries()
+// animateString('111')
+// 	.then(() => animateString('222'))
+// 	.then(() => animateString('222'))
+// 	.then(() => animateString('222'))
+// 	.then(() => animateString('222'));
+// ========================PROMISE PRACTICE===============================
+// const promise = new Promise((resolv, reject) => {
+// 	setTimeout(() => {
+// 		console.log('hello'), 1000;
+// 	});
+// });
+// promise
+// 	.then(result => console.log(result))
+// 	.catch(error => console.log(error));
 
-// const hotel = {
-// 	name: 'Resort Hotel',
-// 	stars: 5,
-// 	capacity: 100,
+// const featchUserData = async () => {
+// 	try {
+// 			const result
+// 		}
+// 	}
+
+// const button = document.querySelector('#button');
+// const popup = document.querySelector('.popup');
+// const confirmBtn = document.querySelector('#confirm');
+// const rejectBtn = document.querySelector('#reject');
+
+// // const confirmation = new Promise((resolve, reject) => {
+// // 	confirmBtn.addEventListener('click', () => resolve());
+// // 	rejectBtn.addEventListener('click', () => reject());
+// // });
+
+// // const togglePopup = () => {
+// // 	popup.classlist.toggle('active');
+// // };
+
+// // button.addEventListener('click', () => {
+// // 	popup.classList.add('active');
+// // });
+
+// const createConfirmationPromise = () => {
+// 	return new Promise((resolve, reject) => {
+// 		confirmBtn.addEventListener('click', () => resolve());
+// 		rejectBtn.addEventListener('click', () => reject());
+// 	});
 // };
 
-// const entries = Object.entries(hotel);
-// console.log(entries);
+// const togglePopup = () => {
+// 	popup.classList.toggle('active');
+// };
+// button.addEventListener('click', () => {
+// 	togglePopup();
+// 	createConfirmationPromise()
+// 		.then(result => {
+// 			console.log('process end');
+// 			togglePopup();
+// 		})
+// 		.catch(error => togglePopup());
+// });
 
-// for (const entry of entries) {
-// 	const key = entry[0];
-// 	const value = entry[1];
+const users = [
+	{
+		name: 'Alex',
+		age: 25,
+	},
+	{
+		name: 'John',
+		age: 28,
+	},
+	{
+		name: 'Trevor',
+		age: 30,
+	},
+	{
+		name: 'Pole',
+		age: 18,
+	},
+];
+// // const promise = new Promise((resolve, reject) => {
+// // 	setTimeout(() => {
+// // 		.then(resolve => {
+// // 		const names = user.map(user => user.name);
+// // 		togglePopup();
+// // 	})
+// // 	.catch(error => console.log('error'));, 1000);
+// // });
+// const promise = new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 		reject('There was an error :(');
+// 	}, 2000);
+// });
 
-// 	console.log(`${key}: ${value}`);
-// }
+// /*
+//  * then не выполнится так как в функции fn, внутри new Promise(fn),
+//  * был вызван reject(). А catch как раз выполнится через 2 секунды
+//  */
+// promise
+// 	.then(data => {
+// 		console.log(data);
+// 	})
+// 	.catch(error => {
+// 		console.log(error);
+// 	});
 
+// const promise = new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 		/*
+// 		 * Если какое-то условие выполняется, то есть все хорошо,
+// 		 * вызываем resolve и получает данные. Условие зависит от задачи.
+// 		 */
+// 		resolve('Data passed into resolve function :)');
+
+// 		// Если что-то не так, вызваем reject и передаем ошибку
+// 		//   reject("Error passed into reject function :(")
+// 	}, 2000);
+// // });
+// const promise = new Promise((resolve, reject) => {
+// 	setTimeout(() => {
+// 		resolve => {
+// 			const names = user.map(user => user.name);
+// 		};
+// 	}, 2000);
+// });
+// // 	// //
+// const names = [];
+// // promise.then(names => user.map(user => user.name));
+const getUsers = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		resolve(users);
+		console.log(users);
+		// const names => user.map(user => user.name)
+	}, 1000);
+});
+// getUsers
+// 	.then(users => {
+// 		const userNames = users.map(users => users.name);
+// 		console.log(userNames);
+// 	})
+// 	.then(userNames => {
+// 		const result = userNames.join(', ');
+// 		console.log(result);
+// 	});
+
+async function foo() {
+	const users = await getUsers;
+	const userNames = await users.map(user => user.name);
+	console.log(userNames);
+	return await userNames.join(', '); // join не работает
+
+	// 	const result = userNames.join(', ');
+	// 	console.log(result);
+	// 	return result;
+}
+foo(users);

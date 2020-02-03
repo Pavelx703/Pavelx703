@@ -1,38 +1,30 @@
 'use strict';
 
-const findLongestWord = function(string) {
-	const words = string.split(' ');
-	let longestWord = words[0];
-	for (let i = 1; i < words.length; i += 1) {
-		let currentWord = words[i];
-		if (words[i].length > longestWord.length) {
-			longestWord = words[i];
-		}
+class Storage {
+	constructor(items) {
+		this.items = items;
 	}
+	getItems = () => this.items;
 
-	return longestWord;
-};
+	addItem = newItem => this.items.push(newItem);
 
-console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
+	removeItem(oldItem) {
+		this.items = this.items.filter(item => item !== oldItem);
+	}
+}
 
-console.log(findLongestWord('Google do a roll')); // 'Google'
+const storage = new Storage([
+	'Нанитоиды',
+	'Пролонгер',
+	'Железные жупи',
+	'Антигравитатор',
+]);
 
-console.log(findLongestWord('May the force be with you')); // 'force'
+const items = storage.getItems();
+console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
 
-//с помощью for...of
+storage.addItem('Дроид');
+console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
 
-// const findLongestWord = function(string) {
-// 	const words = string.split(' ');
-// 	let longestWord = words[0];
-// 	for (const word of words) {
-// 		if (word.length > longestWord.length) {
-// 			longestWord = word;
-// 		}
-// 	}
-// 	return longestWord;
-// };
-// console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
-
-// console.log(findLongestWord('Google do a roll')); // 'Google'
-
-// console.log(findLongestWord('May the force be with you')); // 'force'
+storage.removeItem('Пролонгер');
+console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]

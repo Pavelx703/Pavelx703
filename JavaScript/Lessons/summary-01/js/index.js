@@ -33,12 +33,12 @@
 
 // =======Передача функции как аргумента
 
-// function repeat(n, action) {
-// 	for (let i = 0; i < n; i += 1) {
-// 		action(i);
-// 	}
-// }
-// repeat(5, console.log);
+function repeat(n, action) {
+	for (let i = 0; i < n; i += 1) {
+		action(i);
+	}
+}
+repeat(5, console.log);
 
 //  ======= метод Object.entries()
 
@@ -57,4 +57,3 @@
 
 // 	console.log(`${key}: ${value}`);
 // }
-

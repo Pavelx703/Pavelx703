@@ -1,25 +1,24 @@
 'use strict';
 
-// function formatString(string, limit) {
-// 	limit = 40;
-// 	if (string.length <= limit) return string;
-// 	string = string.slice(0, limit);
-// 	return string + '...';
-// }
+class StringBuilder {
+	constructor(value) {
+		this._value = value;
+	}
+	get value() {
+		return this._value;
+	}
+	append = str => (this._value = `${this._value}${str}`);
+	prepend = str => (this._value = `${str}${this._value}`);
+	pad = str => (this._value = `${str}${this._value}${str}`);
+}
 
-const formatString = (string, maxLength = 40) =>
-	string.length <= maxLength ? string : `${string.slice(0, maxLength)}...`;
+const builder = new StringBuilder('.');
 
-console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
-// вернется оригинальная строка
+builder.append('^');
+console.log(builder.value); // '.^'
 
-console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
-// вернется форматированная строка
+builder.prepend('^');
+console.log(builder.value); // '^.^'
 
-console.log(formatString('Curabitur ligula sapien.'));
-// вернется оригинальная строка
-
-console.log(
-	formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.'),
-);
-// вернется форматированная строка
+builder.pad('=');
+console.log(builder.value); // '=^.^='
