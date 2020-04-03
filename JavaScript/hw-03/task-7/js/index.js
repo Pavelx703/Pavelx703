@@ -17,10 +17,10 @@
 //  * Каждая транзакция это объект со свойствами: id, type и amount
 //  */
 
-// const account = {
-// 	// Текущий баланс счета
-// 	balance: 0,
-
+const account = {
+	// 	// Текущий баланс счета
+	balance: 0,
+};
 // 	// История транзакций
 // 	transactions: [],
 
@@ -36,7 +36,11 @@
 // 	 * Вызывает createTransaction для создания объекта транзакции
 // 	 * после чего добавляет его в историю транзакций
 // 	 */
-// 	deposit(amount) {},
+deposit(amount) {
+    this.balance
+    
+        +=amount
+    },
 
 // 	/*
 // 	 * Метод отвечающий за снятие суммы с баланса.
@@ -65,5 +69,11 @@
 // 	 */
 // 	getTransactionTotal(type) {},
 // };
-// console.log(account);
+account.deposite(200);
+account.deposite(200);
+account.withdraw(200);
+account.withdraw(200);
+account.deposite(200);
+account.deposite(200);
 
+console.log(account.getBalance());
