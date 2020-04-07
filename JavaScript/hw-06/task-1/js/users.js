@@ -7,7 +7,7 @@ export default [
 		friends: ['Sharron Pace'],
 		isActive: false,
 		balance: 2811,
-		skills: ['ipsum', 'lorem'],
+		skills: ['ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem'],
 		gender: 'male',
 		age: 37,
 	},
@@ -82,5 +82,5 @@ export default [
 		skills: ['lorem', 'veniam', 'culpa'],
 		gender: 'female',
 		age: 39,
-	}
+	},
 ];
