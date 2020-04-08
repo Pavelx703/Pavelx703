@@ -36,6 +36,8 @@ class Car {
 	accelerate(value) {
 		if (this.isOn && this.speed + value <= this.maxSpeed) {
 			this.speed += value;
+		} else {
+			this.speed = this.maxSpeed;
 		}
 	}
 	decelerate(value) {
@@ -56,11 +58,13 @@ const mustang = new Car({ maxSpeed: 200, price: 2000 });
 
 mustang.turnOn();
 mustang.accelerate(50);
+
 mustang.drive(2);
 
 Car.getSpecs(mustang);
 
 mustang.decelerate(20);
+
 mustang.drive(1);
 mustang.turnOff();
 

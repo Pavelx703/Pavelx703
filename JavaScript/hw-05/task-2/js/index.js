@@ -1,15 +1,17 @@
 'use strict';
 
-const User = function({ name = ' ', age = 0, followers = 0 }) {
-	this.name = name;
-	this.age = age;
-	this.followers = followers;
-};
-User.prototype.getInfo = function() {
-	console.log(
-		`User ${this.name} is ${this.age} years old and has ${this.followers} followers`,
-	);
-};
+class User {
+	constructor({ name = ' ', age = 0, followers = 0 }) {
+		this.name = name;
+		this.age = age;
+		this.followers = followers;
+	}
+	getInfo() {
+		console.log(
+			`User ${this.name} is ${this.age} years old and has ${this.followers} followers`,
+		);
+	}
+}
 
 const mango = new User({
 	name: 'Mango',
