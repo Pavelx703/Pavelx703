@@ -1,6 +1,10 @@
 'use strict';
 const ingredients = ['Картошка', 'Грибы', 'Чеснок', 'Помидоры', 'Зелень', 'Приправы'];
-// Напиши скрипт, который для каждого элемента массива ingredients
-// создаст отдельный li, после чего вставит все li за одну операцию в
-// список ul.ingredients.
-// Для создания DOM - узлов используй document.createElement().
+const ingredientsHTML = document.querySelector('#ingredients');
+const fragment = document.createDocumentFragment();
+const ingredientsList = ingredients.forEach(el => {
+	let someIngridients = document.createElement('li');
+	someIngridients.textContent = el;
+	fragment.appendChild(someIngridients);
+});
+ingredientsHTML.appendChild(fragment);

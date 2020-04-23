@@ -1,25 +1,19 @@
 'use strict';
-
-// function formatString(string, limit) {
-// 	limit = 40;
-// 	if (string.length <= limit) return string;
-// 	string = string.slice(0, limit);
-// 	return string + '...';
-// }
-
-const formatString = (string, maxLength = 40) =>
-	string.length <= maxLength ? string : `${string.slice(0, maxLength)}...`;
-
-console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
-// вернется оригинальная строка
-
-console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
-// вернется форматированная строка
-
-console.log(formatString('Curabitur ligula sapien.'));
-// вернется оригинальная строка
-
-console.log(
-	formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.'),
-);
-// вернется форматированная строка
+const incrementButton = document.querySelector('button[data-action="increment"]');
+const decrementButton = document.querySelector('button[data-action="decrement"]');
+const counterValue = document.querySelector('#value');
+const increment = function () {
+	const currentValue = Number(counterValue.textContent) + 1;
+	counterValue.textContent = currentValue;
+};
+incrementButton.addEventListener('click', increment);
+const decrement = function () {
+	const currentValue = Number(counterValue.textContent) - 1;
+	counterValue.textContent = currentValue;
+};
+decrementButton.addEventListener('click', decrement);
+console.log(counterValue.textContent);
+increment();
+console.log(counterValue.textContent);
+decrement();
+console.log(counterValue.textContent);

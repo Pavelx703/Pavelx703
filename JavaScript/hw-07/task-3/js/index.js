@@ -1,38 +1,26 @@
 'use strict';
-
-const findLongestWord = function(string) {
-	const words = string.split(' ');
-	let longestWord = words[0];
-	for (let i = 1; i < words.length; i += 1) {
-		let currentWord = words[i];
-		if (words[i].length > longestWord.length) {
-			longestWord = words[i];
-		}
-	}
-
-	return longestWord;
-};
-
-console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
-
-console.log(findLongestWord('Google do a roll')); // 'Google'
-
-console.log(findLongestWord('May the force be with you')); // 'force'
-
-//с помощью for...of
-
-// const findLongestWord = function(string) {
-// 	const words = string.split(' ');
-// 	let longestWord = words[0];
-// 	for (const word of words) {
-// 		if (word.length > longestWord.length) {
-// 			longestWord = word;
-// 		}
-// 	}
-// 	return longestWord;
-// };
-// console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
-
-// console.log(findLongestWord('Google do a roll')); // 'Google'
-
-// console.log(findLongestWord('May the force be with you')); // 'force'
+const images = [
+	{
+		url:
+			'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+		alt: 'White and Black Long Fur Cat',
+	},
+	{
+		url:
+			'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+		alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+	},
+	{
+		url:
+			'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+		alt: 'Group of Horses Running',
+	},
+];
+const gallery = document.querySelector('#gallery');
+let imagesSum = '';
+const imagesObjects = images.forEach(el => {
+	let { url, alt } = el;
+	let image = `<li><a> <img src=${url} alt=${alt}></a> </li>`;
+	imagesSum = imagesSum + image;
+});
+gallery.insertAdjacentHTML('afterbegin', `${imagesSum} `);
