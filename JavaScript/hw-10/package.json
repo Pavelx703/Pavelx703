@@ -11,16 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pavelx703/goit-js-hw-10-food-service"
+    "url": "git+https://github.com/Pavelx703/goit-fe-course/JavaScript/hw-10"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
+    "url": "https://github.com/Pavelx703/goit-fe-course/JavaScript/hw-10"
   },
-  "homepage": "https://github.com/Pavelx703/goit-js-hw-10-food-service#readme",
-
+  "homepage": "https://github.com/Pavelx703/goit-fe-course/JavaScript/hw-10#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
